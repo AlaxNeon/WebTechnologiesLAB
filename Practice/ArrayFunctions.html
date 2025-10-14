@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Array Functions in JavaScript</h2>
+<p id="demo"></p>
+
+<script>
+const arr = [5, 2, 9, 1, 5, 6];
+const arr2 = [10, 20, 30];
+
+let result = `
+<b>Original Array:</b> [${arr}] <br><br>
+
+1. length: ${arr.length}<br>
+2. push(10) → adds at end: ${(() => { let a = [...arr]; a.push(10); return `[${a}]`; })()}<br>
+3. pop() → removes last: ${(() => { let a = [...arr]; a.pop(); return `[${a}]`; })()}<br>
+4. shift() → removes first: ${(() => { let a = [...arr]; a.shift(); return `[${a}]`; })()}<br>
+5. unshift(0) → adds at start: ${(() => { let a = [...arr]; a.unshift(0); return `[${a}]`; })()}<br>
+6. indexOf(5): ${arr.indexOf(5)}<br>
+7. lastIndexOf(5): ${arr.lastIndexOf(5)}<br>
+8. join("-"): ${arr.join("-")}<br>
+9. slice(1,4): ${arr.slice(1,4)}<br>
+10. splice(2,2, 99, 100) → remove 2 & add 99,100: ${(() => { let a = [...arr]; a.splice(2,2,99,100); return `[${a}]`; })()}<br>
+11. concat(arr2): ${arr.concat(arr2)}<br>
+12. reverse(): ${(() => { let a = [...arr]; a.reverse(); return `[${a}]`; })()}<br>
+13. sort(): ${(() => { let a = [...arr]; a.sort((x,y)=>x-y); return `[${a}]`; })()}<br>
+14. filter(x => x > 4): ${arr.filter(x => x > 4)}<br>
+15. map(x => x * 2): ${arr.map(x => x * 2)}<br>
+`;
+
+document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

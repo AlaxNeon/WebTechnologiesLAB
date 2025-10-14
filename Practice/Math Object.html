@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Math Functions in JavaScript</h2>
+<p id="demo"></p>
+
+<script>
+let x = 9.657;
+let y = -12;
+
+let result = `
+<b>Given Values:</b> x = ${x}, y = ${y}<br><br>
+
+1. Math.round(x): ${Math.round(x)}<br>
+2. Math.floor(x): ${Math.floor(x)}<br>
+3. Math.ceil(x): ${Math.ceil(x)}<br>
+4. Math.trunc(x): ${Math.trunc(x)}<br>
+5. Math.pow(2,3): ${Math.pow(2,3)}<br>
+6. Math.sqrt(81): ${Math.sqrt(81)}<br>
+7. Math.abs(y): ${Math.abs(y)}<br>
+8. Math.max(5, 10, 20): ${Math.max(5,10,20)}<br>
+9. Math.min(5, 10, 20): ${Math.min(5,10,20)}<br>
+10. Math.random(): ${Math.random()}<br>
+`;
+
+document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

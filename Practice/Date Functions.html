@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Date Functions in JavaScript</h2>
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+const d2 = new Date("2025-10-09T10:30:00");
+
+let result = `
+<b>Current Date Object:</b> ${d} <br><br>
+
+1. getFullYear(): ${d.getFullYear()}<br>
+2. getMonth() (0–11, +1 for real month): ${d.getMonth()+1}<br>
+3. getDate(): ${d.getDate()}<br>
+4. getDay() (0=Sunday): ${d.getDay()}<br>
+5. getHours(): ${d.getHours()}<br>
+6. getMinutes(): ${d.getMinutes()}<br>
+7. getSeconds(): ${d.getSeconds()}<br>
+8. getMilliseconds(): ${d.getMilliseconds()}<br>
+9. getTime() (milliseconds since 1970): ${d.getTime()}<br>
+10. getTimezoneOffset(): ${d.getTimezoneOffset()}<br>
+11. toDateString(): ${d.toDateString()}<br>
+12. toTimeString(): ${d.toTimeString()}<br>
+13. toLocaleDateString(): ${d.toLocaleDateString()}<br>
+14. toLocaleTimeString(): ${d.toLocaleTimeString()}<br>
+15. toISOString(): ${d.toISOString()}<br>
+16. setFullYear(2030): ${(() => { let temp = new Date(d); temp.setFullYear(2030); return temp; })()}<br>
+17. setMonth(11): ${(() => { let temp = new Date(d); temp.setMonth(11); return temp; })()}<br>
+18. setDate(25): ${(() => { let temp = new Date(d); temp.setDate(25); return temp; })()}<br>
+19. Compare two dates (d2 > d): ${d2 > d}<br>
+`;
+
+document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

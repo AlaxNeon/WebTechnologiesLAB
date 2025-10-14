@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>String Functions in JavaScript</h2>
+<p id="demo"></p>
+
+<script>
+let text = " Hola, Soy Dora ";
+let text2 = "Welcome to JavaScript!";
+
+let result = `
+<b>Original String:</b> "${text}"<br><br>
+
+1. Length: ${text.length}<br>
+2. Uppercase: ${text.toUpperCase()}<br>
+3. Lowercase: ${text.toLowerCase()}<br>
+4. Trim: ${text.trim()}<br>
+5. TrimStart: "${text.trimStart()}"<br>
+6. TrimEnd: "${text.trimEnd()}"<br>
+7. Substring (1,5): ${text.substring(1,5)}<br>
+8. Slice (2,8): ${text.slice(2,8)}<br>
+9. Replace ("Dora", "Boots"): ${text.replace("Dora","Boots")}<br>
+10. Repeat (2): ${text.repeat(2)}<br>
+11. CharAt (5): ${text.charAt(5)}<br>
+12. IndexOf ("Soy"): ${text.indexOf("Soy")}<br>
+13. Includes ("Hola"): ${text.includes("Hola")}<br>
+14. Split (" "): ${text.split(" ")}<br>
+15. Concat with another string: ${text.concat(" ", text2)}<br>
+`;
+
+document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

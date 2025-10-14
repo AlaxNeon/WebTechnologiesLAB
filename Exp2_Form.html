@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form action ="abc.php" method="post">
+
+	<label>Salutation:</label>
+	<select name="salutation">
+		<option value=""></option>
+		<option value="mr">Mr.</option>
+		<option value="ms">Ms.</option>
+	</select><br><br>
+
+	<label>Name of Candidate:</label>
+	<input type="text" name="nameofcandidate" required><br><br>
+
+	<label>Name of Father:</label>
+	<input type="text" name="nameoffather" required><br><br>
+
+	<label>Name of Mother:</label>
+	<input type="text" name="nameofmother" required><br><br>
+
+	<label>Phone Number:</label>
+	<input type="number" name="phone" required><br><br>
+
+	<label>EmailId:</label>
+	<input type="email" name="email" required><br><br>
+
+	<label>Parent's EmailId:</label>
+	<input type="email" name="parentemail" required><br><br>
+
+	<label>Gender:</label>
+	<input type="radio" name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female<br><br>
+
+	<label>Address:</label>
+	<textarea name="add" rows="4" cols="40"></textarea><br><br>
+
+	<label>Course:</label>
+	<select name="course">
+		<option value=""></option>
+		<option value="bca">BCA</option>
+		<option value="bsc">B.SC</option>
+		<option value="bcom">B.Com</option>
+		<option value="ba">B.A</option>
+		<option value="bms">BMS</option>
+	</select><br><br>
+
+	<label>Previous Board:</label>
+	<input type="radio" name="previousboard" value="cbse">CBSE
+	<input type="radio" name="previousboard" value="icse">ICSE
+	<input type="radio" name="previousboard" value="ib">IB
+	<input type="radio" name="previousboard" value="stateboard">State Board<br><br>
+
+	<label>Pass Percentage:</label>
+	<input type="number" name="passpercent" required>
+		<span>%</span>
+	<br><br>
+
+	<input type="submit" value="Submit">
+	<input type="reset" value="Reset">
