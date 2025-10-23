@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Result</title>
+</head>
+<body>
+  <script>
+    let subjects = ["WT", "ESD", "TW", "IDS", "PCL"];
+    let marks = [];
+    let failedSubjects = [];
+
+    for (let i = 0; i < subjects.length; i++) {
+      marks[i] = +prompt("Enter marks for " + subjects[i] + ":");
+      if (marks[i] < 40) failedSubjects.push(subjects[i]);
+    }
+
+    if (failedSubjects.length > 0) {
+      document.write(
+        "The student has to reappear in " + failedSubjects.length +
+        " subject(s): " + failedSubjects.join(", ")
+      );
+
+      if (failedSubjects.length > 3) {
+        // document.write("<br><br><img src='https://i.pinimg.com/originals/b3/46/1d/b3461d65f81f0506e75ed2329444cadc.gif' width='300'>");
+        document.write(
+        " <br>FAIL");
+      }
+    } 
+    else {
+      let total = marks.reduce((a, b) => a + b, 0);
+      let per = (total / 500) * 100;
+      let grade = per >= 90 ? "Outstanding" :
+                  per >= 74 ? "Distinction" :
+                  per >= 60 ? "First Class" :
+                  per >= 50 ? "Second Class" :
+                  per >= 40 ? "Third Class" : "Fail";
+
+      document.write("<h2>Student Result</h2>");
+      for (let i = 0; i < subjects.length; i++) {
+        document.write(subjects[i] + ": " + marks[i] + "<br>");
+      }
+      document.write("<br>Total Marks: " + total + " / 500<br>");
+      document.write("Percentage: " + per.toFixed(2) + "%<br>");
+      document.write("Result: " + grade);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Student Result</title>
+</head>
+<body>
+  <script>
+    let s1 = +prompt("Enter marks for WT:");
+    let s2 = +prompt("Enter marks for ESD:");
+    let s3 = +prompt("Enter marks for TW:");
+    let s4 = +prompt("Enter marks for IDS:");
+    let s5 = +prompt("Enter marks for PCL:");
+
+    let total = s1 + s2 + s3 + s4 + s5;
+    let per = (total / 500) * 100;
+
+    let grade = per > 100 ? "Standing out of College":
+                per >= 90 ? "Outstanding" :
+                per >= 74 ? "Distinction" :
+                per >= 60 ? "First Class" :
+                per >= 50 ? "Second Class" :
+                per >= 40 ? "Third Class" : "Fail";
+
+    document.write(
+      "<h2>Student Result</h2>" +
+      "WT: " + s1 + "<br>" +
+      "ESD: " + s2 + "<br>" +
+      "TW: " + s3 + "<br>" +
+      "IDS: " + s4 + "<br>" +
+      "PCL: " + s5 + "<br><br>" +
+      "Total Marks: " + total + " / 500<br>" +
+      "Percentage: " + per.toFixed(2) + "%<br>" +
+      "Result: " + grade
+    );
+  </script>
+</body>
+</html> -->
