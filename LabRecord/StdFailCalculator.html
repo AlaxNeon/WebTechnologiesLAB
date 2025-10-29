@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Result</title>
+</head>
+<body>
+  <script>
+    let subjects = ["WT", "ESD", "TW", "IDS", "PCL"];
+    let marks = [];
+    let backlogs = 0;
+
+    // Take marks and count backlogs
+    for (let i = 0; i < subjects.length; i++) {
+      marks[i] = +prompt("Enter marks for " + subjects[i] + ":");
+      if (marks[i] < 40) backlogs++;
+    }
+
+    // If failed in more than 3 → direct fail
+    if (backlogs > 3) {
+      document.write("Fail – The student has more than 3 backlogs.");
+    } 
+    // If failed in 1 to 3 → show backlog count only
+    else if (backlogs > 0) {
+      document.write("The student has to reappear in " + backlogs + " subject(s).");
+    } 
+    // Otherwise → show full result
+    else {
+      let total = marks.reduce((a, b) => a + b, 0);
+      let per = (total / 500) * 100;
+      let grade = per >= 90 ? "Outstanding" :
+                  per >= 74 ? "Distinction" :
+                  per >= 60 ? "First Class" :
+                  per >= 50 ? "Second Class" :
+                  per >= 40 ? "Third Class" : "Fail";
+
+      document.write("<h2>Student Result</h2>");
+      for (let i = 0; i < subjects.length; i++) {
+        document.write(subjects[i] + ": " + marks[i] + "<br>");
+      }
+      document.write("<br>Total Marks: " + total + " / 500<br>");
+      document.write("Percentage: " + per.toFixed(2) + "%<br>");
+      document.write("Result: " + grade);
+    }
+  </script>
+</body>
+</html>
