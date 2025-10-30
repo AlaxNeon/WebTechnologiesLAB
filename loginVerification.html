@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Login</title>
+</head>
+<body>
+  <script>
+    const USERNAME = "admin";
+    const PASSWORD = "1234";
+
+    while (true) {
+      let user = prompt("Enter Username:");
+      let pass = prompt("Enter Password:");
+
+      if (user === USERNAME && pass === PASSWORD) {
+        alert("Login Successful!");
+        break;
+      } else if (user !== USERNAME) {
+        alert("Incorrect Username. Please try again.");
+      } else if (pass !== PASSWORD) {
+        alert("Incorrect Password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
